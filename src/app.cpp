@@ -49,7 +49,8 @@ bool CApplication::InternOnReleaseTextures() {
     ReleaseTexture(rightPaddleTexture);
     ReleaseTexture(blockTexture);
 
-    game->createMenu->~CMenu();             //in case the player closes the game on his own
+    //in case the player closes the game on his own
+    game->createMenu->~CMenu();             
 
 	return true;
 }

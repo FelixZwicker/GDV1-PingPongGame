@@ -8,8 +8,9 @@ void main() {
 	cout << endl << endl << endl;
 	cout << "Game: \n\n";
 	cout << "	This game is a basic Ping-Pong type of game\n";
+	cout << "	and ment to be played in fullscreen\n";
 	cout << "	The goal is to beat your opponent and score 3 times\n";
-	cout << endl << endl;
+	cout << endl;
 	cout << "Controles:	\n\n";
 	cout << "	Press '1' in the beginning to select SinglePlayer\n";
 	cout << "	Controls are only UP/DOWN - ARROWS in SinglePlayer\n";

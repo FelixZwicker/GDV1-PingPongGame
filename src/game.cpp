@@ -167,10 +167,12 @@ void CGame::buildGame() {					//puts needed game objects in vector
 		this->objects.push_back(&this->blocks[i]);
 	}
 
+	if (!firstBuild) {					//release old mesh in rebuild
+		removeRightScore();
+		removeLeftScore();
+	}
+
 	switch (rightPlayerCounter) {			//scoreMesh depends on goals
-		if (!firstBuild) {					//release old mesh in rebuild
-			removeRightScore();
-		}
 	case 0:
 		showRightScore(EMenuTexture::SCOREZERO);
 		break;
@@ -186,9 +188,6 @@ void CGame::buildGame() {					//puts needed game objects in vector
 	}
 
 	switch (leftPlayerCounter) {
-		if (!firstBuild) {
-			removeLeftScore();
-		}
 	case 0:
 		showLeftScore(EMenuTexture::SCOREZERO);
 		break;
